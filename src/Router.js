@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "popper.js/dist/umd/popper.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
+import Footer from "./Footer";
 
 const Router = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -62,6 +63,7 @@ const Router = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 };
