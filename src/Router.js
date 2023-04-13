@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Gallery from "./pages/Gallery";
+import Gallery from "./pages/Project";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "popper.js/dist/umd/popper.min.js";
@@ -45,7 +45,7 @@ const Router = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/gallery">
-                  Gallery
+                  Project
                 </Link>
               </li>
               <li className="nav-item">
