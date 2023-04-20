@@ -37,7 +37,10 @@ const Router = () => {
             className={`collapse navbar-collapse ${isExpanded ? "show" : ""}`}
             id="navbarNav"
           >
-            <ul className="navbar-nav ml-auto justify-content-end">
+            <ul
+              className="navbar-nav ml-auto justify-content-end"
+              style={{ fontSize: "25px" }}
+            >
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
