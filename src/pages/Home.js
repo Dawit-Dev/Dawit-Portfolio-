@@ -10,7 +10,7 @@ const Home = () => {
           <h1 className="display-4">Welcome to Dawit's Portfolio</h1>
           <p className="lead">
             I am a Full Stack Developer with expertise in HTML, CSS, JavaScript,
-            React, Node.js, PostgreSQL, and Github.
+            React, React Native, Python, Node.js, PostgreSQL, and Github.
           </p>
         </div>
       </div>
@@ -25,13 +25,17 @@ const Home = () => {
           </div>
           <div className="col-md-8">
             <h2>About Me</h2>
-            <p className="h4 mb-4" style={{ padding: "1rem 0" }}>
-              My name is Dawit Abraha and I am passionate about building web
-              applications that provide a seamless user experience and meet the
-              needs of businesses and individuals. With a deep understanding of
-              the software development process, from ideation to deployment, my
-              goal is to use my skills to create innovative and high-quality
-              software solutions that make a difference.
+            <p
+              className="h4 mb-4"
+              style={{ padding: "1rem 0", textAlign: "left" }}
+            >
+              Hello, I'm Dawit Abraha, and I'm dedicated to crafting web
+              applications that deliver exceptional user experiences while
+              fulfilling the unique requirements of businesses and individuals.
+              With a profound grasp of the software development lifecycle, from
+              concept to deployment, my mission is to leverage my expertise to
+              create innovative, top-tier software solutions that drive
+              meaningful impact.
             </p>
           </div>
         </div>

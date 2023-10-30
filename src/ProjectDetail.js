@@ -1,7 +1,7 @@
 // import React from "react";
 import Image1 from "./images/screenshot-1.png";
 import Image2 from "./images/screenshot-2.png";
-import Image3 from "./images/screenshot-3.png";
+import Image5 from "./images/Screenshot-6.png";
 import Image4 from "./images/screenshot-4.png";
 
 export const ProjectDetail = [
@@ -25,12 +25,12 @@ export const ProjectDetail = [
   },
   {
     id: 3,
-    title: "London-mini-guid",
+    title: "TV Show Project",
     description:
-      "This is a web application that provides a guide to various locations in London, including pharmacies, doctors' offices, hospitals, and colleges. Users can select a city and view information about each location, including their website, phone number, and address. The project uses React and Node.js for the frontend and backend development, respectively.",
-    image: Image3,
-    demo: "https://dawit-london-mini-guid.onrender.com",
-    repo: "https://github.com/Dawit-Dev/London-mini-guid",
+      "This dynamic web app, inspired by Netflix, features an engaging UI for TV show and episode management. It relies on TVMaze.com for data, honing my JavaScript DOM manipulation skills vital in Frontend Web Dev. The tech stack includes HTML, CSS, JavaScript, and Bootstrap, enabling key features like search filters, select options, and seamless navigation between shows and episodes based on user choices.",
+    image: Image5,
+    demo: "https://cyf-dawit-dev-tv.netlify.app/",
+    repo: "https://github.com/Dawit-Dev/tv-show-dom-project",
   },
   {
     id: 4,
