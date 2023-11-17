@@ -1,6 +1,4 @@
 import React from "react";
-import linkedinLogo from "./images/LinkedIn.png";
-import githubLogo from "./images/GitHub.png";
 
 const Footer = () => {
   return (
@@ -11,7 +9,12 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedinLogo} alt="LinkedIn" width="32" height="32" />
+          <img
+            src={"/images/LinkedIn.png"}
+            alt="LinkedIn"
+            width="32"
+            height="32"
+          />
         </a>
         <a
           href="https://github.com/Dawit-Dev"
@@ -19,7 +22,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="ml-3"
         >
-          <img src={githubLogo} alt="GitHub" width="32" height="32" />
+          <img src={"/images/GitHub.png"} alt="GitHub" width="32" height="32" />
         </a>
       </div>
     </footer>

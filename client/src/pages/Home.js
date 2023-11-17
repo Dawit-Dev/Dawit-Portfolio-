@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import image from "../images/image.png";
 
 const Home = () => {
   return (
@@ -18,7 +17,7 @@ const Home = () => {
         <div className="row align-items-center">
           <div className="col-md-4">
             <img
-              src={image}
+              src={"/images/image.png"}
               className="img-fluid rounded-circle mb-3"
               alt="Profile"
             />

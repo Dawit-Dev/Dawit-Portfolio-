@@ -1,10 +1,18 @@
-import React from "react";
-import { ProjectDetail } from "../ProjectDetail";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Project = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    axios.get("/api/projects").then((data) => {
+      setProjects(data.data)
+    }).catch((error) => console.log(error))
+  }, [])
+
   return (
     <div className="container-fluid p-0">
-      <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
+       <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
         <div className="container">
           <h1 className="display-4">Projects</h1>
           <p className="lead">Check out some of my latest projects below.</p>
@@ -12,7 +20,7 @@ const Project = () => {
       </div>
       <div className="container mt-5 mb-5">
         <div className="row">
-          {ProjectDetail.map((project) => (
+          {projects.map((project) => (
             <div className="col-md-6 mb-4" key={project.id}>
               <div
                 className="card shadow-sm h-100"
@@ -80,60 +88,3 @@ const Project = () => {
 };
 
 export default Project;
- 
-// import React from "react";
-// import { ProjectDetail } from "../ProjectDetail";
-// import { Carousel } from "react-bootstrap";
-
-// const Project = () => {
-//   return (
-//     <div className="container-fluid p-0">
-//       <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
-//         <div className="container">
-//           <h1 className="display-4">Projects</h1>
-//           <p className="lead">Check out some of my latest projects below.</p>
-//         </div>
-//       </div>
-//       <div className="container mt-5 mb-5">
-//         <Carousel fade={true}>
-//           {ProjectDetail.map((project) => (
-//             <Carousel.Item key={project.id}>
-//               <div className="d-flex flex-column align-items-center">
-//                 <img
-//                   src={project.image}
-//                   alt={project.title}
-//                   className="d-block w-75 mb-4"
-//                 />
-//                 <h3>{project.title}</h3>
-//                 <p style={{ width: "75%", textAlign: "left" }}>
-//                   {project.description}
-//                 </p>
-//                 <div className="btn-group mt-2">
-//                   <a
-//                     href={project.demo}
-//                     className="btn btn-primary"
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                   >
-//                     Demo
-//                   </a>
-//                   <a
-//                     href={project.repo}
-//                     className="btn btn-secondary"
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                   >
-//                     Code
-//                   </a>
-//                 </div>
-//               </div>
-//             </Carousel.Item>
-//           ))}
-//         </Carousel>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Project;
-
