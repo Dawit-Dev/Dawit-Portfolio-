@@ -9,4 +9,9 @@ app.get("/api/projects", async (req, res) => {
     res.json(projects)
 })
 
+app.get("/api/summary", async (req, res) => {
+  const summary = await prisma.summary.findMany();
+  res.json(summary);
+});
+
 app.listen(port, () => console.log(`Server listening on port ${port}`));

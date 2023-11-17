@@ -1,16 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Home = () => {
+  const [summary, setSummary] = useState({});
+
+  useEffect(() => {
+    axios
+      .get("/api/summary")
+      .then((data) => {
+        setSummary(data.data[0]);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div className="container-fluid p-0">
       <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
         <div className="container">
           <h1 className="display-4">Welcome to Dawit's Portfolio</h1>
-          <p className="lead">
-            I am a Full Stack Developer with expertise in HTML, CSS, JavaScript,
-            React, React Native, Python, Node.js, PostgreSQL, and Github.
-          </p>
+          <p className="lead">{summary.highlight}</p>
         </div>
       </div>
       <div className="container mt-5 mb-5">
@@ -28,13 +38,7 @@ const Home = () => {
               className="h4 mb-4"
               style={{ padding: "1rem 0", textAlign: "left" }}
             >
-              Hello, I'm Dawit Abraha, and I'm dedicated to crafting web
-              applications that deliver exceptional user experiences while
-              fulfilling the unique requirements of businesses and individuals.
-              With a profound grasp of the software development lifecycle, from
-              concept to deployment, my mission is to leverage my expertise to
-              create innovative, top-tier software solutions that drive
-              meaningful impact.
+              {summary.intro}
             </p>
           </div>
         </div>

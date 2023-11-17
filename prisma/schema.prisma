@@ -18,3 +18,15 @@ model project {
   demo    String @db.VarChar(255)
   repo  String @db.VarChar(255)
 }
+
+model summary {
+  id        Int      @id @default(autoincrement())
+  highlight   String?
+  intro   String?
+}
+
+model about {
+  id        Int      @id @default(autoincrement())
+  bio   String?
+  career   String?
+}
