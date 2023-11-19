@@ -1,6 +1,19 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const About = () => {
+  const [about, setabout] = useState({});
+
+  useEffect(() => {
+    axios
+      .get("/api/about")
+      .then((data) => {
+        setabout(data.data[0]);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div>
       <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
@@ -8,12 +21,7 @@ const About = () => {
       </div>
       <div className="mt-4 px-4 container mt-5 mb-5">
         <p className="lead" style={{ textAlign: "left" }}>
-          Hello! I'm Dawit Abraha, a passionate web developer dedicated to
-          crafting seamless user experiences and delivering tailored solutions
-          for both businesses and individuals. With a deep understanding of the
-          entire software development lifecycle, from ideation to deployment, I
-          strive to leverage my skills to create innovative, high-quality
-          software that makes a meaningful impact.
+          {about.bio}
         </p>
       </div>
       {/* <div className="mt-4 px-4 container mt-5 mb-5">
@@ -29,35 +37,6 @@ const About = () => {
         <div>
           <div className="mt-4 px-4">
             <h2>Technical Proficiency</h2>
-            {/* <ul className="list-unstyled">
-              <li>
-                <FontAwesomeIcon icon={faCss3} /> CSS
-              </li>
-              <li>
-                <i className="fas fa-css3-alt"></i> CSS
-              </li>
-              <li>
-                <i className="fab fa-js"></i> JavaScript
-              </li>
-              <li>
-                <i className="fab fa-react"></i> React
-              </li>
-              <li>
-                <i className="fab fa-react"></i> React Native
-              </li>
-              <li>
-                <i className="fab fa-python"></i> Python
-              </li>
-              <li>
-                <i className="fab fa-node"></i> Node.js
-              </li>
-              <li>
-                <i className="fas fa-database"></i> PostgreSQL
-              </li>
-              <li>
-                <i className="fab fa-github"></i> GitHub
-              </li>
-            </ul> */}
             <p>
               I'm passionate about staying at the forefront of technology
               trends, ensuring that the solutions I build are always
@@ -69,12 +48,7 @@ const About = () => {
       <div className="mt-4 px-4 container mt-5 mb-5">
         <h2>Professional Journey</h2>
         <p style={{ textAlign: "left" }}>
-          My journey in web development began with a strong educational
-          foundation. I hold a degree in [Your Degree], and I've further honed
-          my skills through hands-on experience and continuous learning.
-          Notably, I have successfully completed courses in React Native and
-          Python on Udemy, gaining profound expertise in mobile app development
-          and backend scripting.
+           {about.career}
         </p>
       </div>
       <div className="mt-4 px-4 container mt-5 mb-5">
