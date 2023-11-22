@@ -29,4 +29,8 @@ model about {
   id        Int      @id @default(autoincrement())
   bio   String?
   career   String?
+  bio_title String @db.VarChar(255) 
+  career_title String @db.VarChar(255)  
+  contact_info String?
+  contact_info_title String @db.VarChar(255)
 }
