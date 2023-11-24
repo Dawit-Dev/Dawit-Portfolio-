@@ -1,8 +1,14 @@
 const express = require("express");
 const prisma = require("../db/prisma");
+const path = require("path");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 4000;
+
+app.use(cors())
+
+app.use(express.static(path.resolve(__dirname, "../client/build")));
 
 app.get("/api/projects", async (req, res) => {
   const projects = await prisma.project.findMany();
