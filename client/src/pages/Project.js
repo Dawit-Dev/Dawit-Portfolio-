@@ -12,7 +12,7 @@ const Project = () => {
 
   return (
     <div className="container-fluid p-0">
-       <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
+       <div className="jumbotron jumbotron-fluid mb-0">
         <div className="container">
           <h1 className="display-4">Projects</h1>
           <p className="lead">Check out some of my latest projects below.</p>

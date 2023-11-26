@@ -16,37 +16,25 @@ const Router = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const style = {
-    body: {
-      backgroundColor: "#68829e",
-    },
-    customNavbarStyle: {
-      backgroundColor: "#505160",
-      color: "#FFFFFF",
-    },
-  };
-
   return (
     <BrowserRouter>
-      <div style={style.body}>
-        {/* <nav className="navbar navbar-expand-lg navbar-light style={customNavbarStyle}"> */}
-        <nav
-          className="navbar navbar-expand-lg navbar-light"
-          style={style.customNavbarStyle}
-        >
-          <Link className="navbar-brand" to="/">
-            My Website
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            aria-controls="navbarNav"
-            aria-expanded={isExpanded}
-            aria-label="Toggle navigation"
-            onClick={handleToggle}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <div>
+            <Link className="navbar-brand" to="/">
+              My Website
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              aria-controls="navbarNav"
+              aria-expanded={isExpanded}
+              aria-label="Toggle navigation"
+              onClick={handleToggle}
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div
             className={`collapse navbar-collapse ${isExpanded ? "show" : ""}`}
             id="navbarNav"
@@ -84,7 +72,5 @@ const Router = () => {
     </BrowserRouter>
   );
 };
-
-
 
 export default Router;

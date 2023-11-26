@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="container-fluid p-0">
-      <div className="jumbotron jumbotron-fluid bg-dark text-white mb-0">
+      <div className="jumbotron jumbotron-fluid mb-0">
         <div className="container">
           <h1 className="display-4">Welcome to Dawit's Portfolio</h1>
           <p className="lead">{summary.highlight}</p>

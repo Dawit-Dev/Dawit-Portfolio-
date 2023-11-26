@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-light py-3">
+    <footer className="  py-3" style={{ backgroundColor: "#536980" }}>
       <div className="container text-center">
         <a
           href="https://www.linkedin.com/in/dawit-abraha-a5732023a/"
