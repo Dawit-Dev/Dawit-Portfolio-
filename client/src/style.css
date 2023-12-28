@@ -7,12 +7,36 @@ body {
     background-color: #68829e;
 }
 
+.main-container {
+  width: 80%;
+  margin: auto;
+}
+
+/* .bracket {
+  background-color: aqua;
+} */
+
+.horizontal-bar {
+  width: 240px;
+  height: 20px;
+  background-color: goldenrod;
+}
+
+.vertical-bar {
+  width: 20px;
+  height: 220px;
+  background-color: goldenrod;
+}
+
 .navbar {
   background-color: #536980;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.25rem;
+  position: absolute;
+  top: 20px;
+  right: 10%;
 }
 
 .navbar-brand,
@@ -22,4 +46,44 @@ body {
 
 .navbar-nav {
   margin-left: auto;
+}
+
+.home-main {
+  position: absolute;
+  top: 100px;
+  right: 10%;
+  left: 12%;
+}
+
+.hero {
+  width: 90%;
+  margin: auto;
+}
+
+.lead {
+  width: 95%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.image-intro {
+  /* width: 95%; */
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.intro {
+  font-size: 1.75rem;
+}
+
+.img-fluid {
+  width: 300px;
+  height: auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
 }

@@ -18,7 +18,11 @@ const Router = () => {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="main-container">
+        <div className="bracket">
+          <div className="horizontal-bar"></div>
+          <div className="vertical-bar"></div>
+        </div>
         <nav className="navbar navbar-expand-lg navbar-light">
           <div>
             <Link className="navbar-brand" to="/">
@@ -67,8 +71,9 @@ const Router = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </div>
       <Footer />
+      <div>Hi I am an empty Div</div>
+      </div>
     </BrowserRouter>
   );
 };

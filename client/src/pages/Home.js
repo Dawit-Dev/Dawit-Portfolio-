@@ -16,33 +16,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container-fluid p-0">
-      <div className="jumbotron jumbotron-fluid mb-0">
-        <div className="container">
-          <h1 className="display-4">Welcome to Dawit's Portfolio</h1>
-          <p className="lead">{summary.highlight}</p>
-        </div>
+    <div className="home-main">
+      <div className="hero">
+        <h1 className="display-2 fw-bold">Welcome to my Portfolio</h1>
+        <h4 className="lead">{summary.highlight}</h4>
       </div>
-      <div className="container mt-5 mb-5">
-        <div className="row align-items-center">
-          <div className="col-md-4">
-            <img
-              src={"/images/image.png"}
-              className="img-fluid rounded-circle mb-3"
-              alt="Profile"
-            />
-          </div>
-          <div className="col-md-8">
-            <h2>About Me</h2>
-            <p
-              className="h4 mb-4"
-              style={{ padding: "1rem 0", textAlign: "left" }}
-            >
-              {summary.intro}
-            </p>
-          </div>
+      <div className="image-intro">
+        <img
+          src={"/images/image.png"}
+          className="img-fluid rounded-circle"
+          alt="Profile"
+        />
+          <h3
+            className="intro">
+            {summary.intro}
+          </h3>
         </div>
-      </div>
     </div>
   );
 };
