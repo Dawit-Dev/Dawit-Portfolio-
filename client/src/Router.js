@@ -25,7 +25,7 @@ const Router = () => {
         </div>
         <nav className="navbar navbar-expand-lg navbar-light">
           <div>
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand text-light fw-bold fs-3" to="/">
               My Website
             </Link>
             <button
@@ -48,17 +48,17 @@ const Router = () => {
               style={{ fontSize: "25px" }}
             >
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link text-light" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/gallery">
+                <Link className="nav-link text-light" to="/gallery">
                   Project
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link text-light" to="/about">
                   About
                 </Link>
               </li>
@@ -71,9 +71,12 @@ const Router = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      <Footer />
-      <div>Hi I am an empty Div</div>
+        <div className="right-bottom-bracket">
+          <div className="bottom-vertical-bar"></div>
+          <div className="bottom-horizontal-bar"></div>
+        </div>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 };

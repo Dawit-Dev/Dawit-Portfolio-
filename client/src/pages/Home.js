@@ -23,8 +23,8 @@ const Home = () => {
       </div>
       <div className="image-intro">
         <img
-          src={"/images/image.png"}
-          className="img-fluid rounded-circle"
+          src={"/images/developer.png"}
+          className="img"
           alt="Profile"
         />
           <h3
