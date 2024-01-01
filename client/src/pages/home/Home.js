@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import "./home.css"
 
 const Home = () => {
   const [summary, setSummary] = useState({});
@@ -19,19 +21,20 @@ const Home = () => {
     <div className="home-main">
       <div className="hero">
         <h1 className="display-2 fw-bold">Welcome to my Portfolio</h1>
-        <h4 className="lead">{summary.highlight}</h4>
+        <h4 className="highlight">{summary.highlight}</h4>
       </div>
       <div className="image-intro">
-        <img
-          src={"/images/developer.png"}
-          className="img"
-          alt="Profile"
-        />
-          <h3
-            className="intro">
-            {summary.intro}
-          </h3>
-        </div>
+        <img src={"/images/developer.png"} className="img" alt="Profile" />
+        <h3 className="intro">{summary.intro}</h3>
+      </div>
+      <div className="btns">
+        <Link className="btn btn-primary text-light fw-bold fs-3" to="/gallery">
+          My Projects
+        </Link>
+        <Link className="btn btn-primary text-light fw-bold fs-3" to="/about">
+          About Me
+        </Link>
+      </div>
     </div>
   );
 };

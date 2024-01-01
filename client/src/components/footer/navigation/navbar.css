@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #536980;
+  background-color: #125059;
+  color: #C1D0DC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbar-brand,
+.navbar-toggler {
+  margin-right: 15px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 1140px) {
+   .navbar {
+    right: calc(5% + 20px);
+   }
+}

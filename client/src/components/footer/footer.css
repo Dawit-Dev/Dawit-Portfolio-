@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0 !important;
+  width: 100%;
+  height: 60px;
+  background-color: #68829e;
+  background-color: #0a0d10;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.linkedin,
+.github {
+  font-size: 33px;
+}
