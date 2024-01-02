@@ -25,13 +25,13 @@ const Home = () => {
       </div>
       <div className="image-intro">
         <img src={"/images/developer.png"} className="img" alt="Profile" />
-        <h3 className="intro">{summary.intro}</h3>
+        <h4 className="intro">{summary.intro}</h4>
       </div>
       <div className="btns">
-        <Link className="btn btn-primary text-light fw-bold fs-3" to="/gallery">
+        <Link className="btn btn-primary text-light" to="/gallery">
           My Projects
         </Link>
-        <Link className="btn btn-primary text-light fw-bold fs-3" to="/about">
+        <Link className="btn btn-primary text-light" to="/about">
           About Me
         </Link>
       </div>

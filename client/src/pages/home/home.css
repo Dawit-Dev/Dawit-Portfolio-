@@ -1,13 +1,15 @@
 .home-main {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* align-items: center; */
-  top: 620px;
-  right: 24px;
-  left: 28px;
-  bottom: 80px;
+  margin-top: -164px;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.hero,
+.intro {
+  z-index: 2;
 }
 
 .image-intro {
@@ -82,23 +84,10 @@
   }
 } */
 
-@media only screen and (min-width: 590px) {
-  .home-main {
-    top: 520px;
-  }
-}
-
-@media only screen and (min-width: 990px) {
-  .home-main {
-    top: 420px;
-  }
-}
-
 @media only screen and (min-width: 1140px) {
   .home-main {
-    top: 260px;
-    left: calc(5% + 28px);
-    right: calc(5% + 28px);
+    margin-left: calc(5% + 28px);
+    margin-right: calc(5% + 28px);
   }
   .image-intro {
     flex-direction: row;

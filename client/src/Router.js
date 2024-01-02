@@ -7,26 +7,27 @@ import Footer from "./components/footer/Footer";
 
 const Router = () => {
   return (
-    <BrowserRouter className="app-container">
-      <div className="main-container">
+    <BrowserRouter>
+      <div className="app-container">
         <div className="bracket">
           <div className="horizontal-bar"></div>
           <div className="vertical-bar"></div>
         </div>
+        <div className="main-container">
+          <Navbar />
 
-        <Navbar />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
         <div className="right-bottom-bracket">
           <div className="bottom-vertical-bar"></div>
           <div className="bottom-horizontal-bar"></div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   );
 };
