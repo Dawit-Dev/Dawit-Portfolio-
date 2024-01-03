@@ -1,0 +1,20 @@
+.projects-main {
+  margin-top: -164px;
+  padding-bottom: 80px;
+  color: black;
+}
+
+.title {
+  color: #c1d0dc;
+}
+
+.project-wrapper,
+.title {
+  width: 85%;
+  margin: auto;
+  z-index: 4;
+}
+
+.project-wrapper {
+    background-color: #591b12;
+}

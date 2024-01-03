@@ -25,3 +25,14 @@
     right: calc(5% + 20px);
    }
 }
+
+@media only screen and (min-width: 1348px) {
+   .navbar {
+    right: calc(10% + 20px);
+   }
+}
+@media only screen and (min-width: 1648px) {
+   .navbar {
+    right: calc(15% + 20px);
+   }
+}
