@@ -1,20 +1,40 @@
 .projects-main {
-  margin-top: -164px;
+  position: relative;
+  z-index: 4;
   padding-bottom: 80px;
+  margin-top: -164px;
   color: black;
+}
+
+.projects {
+  width: 85%;
+  margin: auto;
 }
 
 .title {
   color: #c1d0dc;
-}
-
-.project-wrapper,
-.title {
-  width: 85%;
-  margin: auto;
-  z-index: 4;
+  margin-left: 7.5%;
 }
 
 .project-wrapper {
-    background-color: #591b12;
+  width: 100%;
+  background-color: #125059;
+  background-color: #591b12;
+  background-color: #283C4A;
+  color: white;
+  margin-bottom: 2rem;
 }
+
+.project-title,
+.project-summary {
+  padding: 16px;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+}
+
+/* .project-summary {
+  background-color: #591b12;
+} */

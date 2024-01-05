@@ -1,5 +1,6 @@
 .footer {
   position: absolute;
+  z-index: 4;
   left: 0;
   bottom: 0 !important;
   width: 100%;
@@ -18,4 +19,5 @@
 .linkedin,
 .github {
   font-size: 33px;
+  color: #125059;
 }
