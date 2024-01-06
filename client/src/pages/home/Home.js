@@ -28,10 +28,10 @@ const Home = () => {
         <h4 className="intro">{summary.intro}</h4>
       </div>
       <div className="btns">
-        <Link className="btn btn-primary text-light" to="/gallery">
+        <Link className="button text-light" to="/gallery">
           My Projects
         </Link>
-        <Link className="btn btn-primary text-light" to="/about">
+        <Link className="button text-light" to="/about">
           About Me
         </Link>
       </div>

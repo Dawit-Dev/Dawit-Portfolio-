@@ -20,7 +20,7 @@
   width: 100%;
   background-color: #125059;
   background-color: #591b12;
-  background-color: #283C4A;
+  background-color: #283c4a;
   color: white;
   margin-bottom: 2rem;
 }
@@ -38,3 +38,29 @@
 /* .project-summary {
   background-color: #591b12;
 } */
+
+@media only screen and (min-width: 1348px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    /* height: 100%; */
+  }
+  .btn-group {
+    margin-bottom: 0;
+  }
+  .project-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .project-title {
+    /* display: flex;
+    align-items: center; */
+    background-color: black;
+  }
+  .project-img {
+    margin-top: 0;
+  }
+}
