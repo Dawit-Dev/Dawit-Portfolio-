@@ -28,16 +28,29 @@
 .project-title,
 .project-summary {
   padding: 16px;
+  margin-bottom: 0;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #0a0d10;
 }
 
 .project-img {
   width: 100%;
-  height: auto;
+  height: 250px;
 }
 
-/* .project-summary {
-  background-color: #591b12;
-} */
+.react-read-more-read-less,
+.react-read-more-read-less-more {
+  color: #8ac5d6;
+  font-weight: 600;
+}
+
+.btn-group {
+  background-color: #0a0d10;
+}
 
 @media only screen and (min-width: 1348px) {
   .projects {
@@ -49,18 +62,18 @@
   .btn-group {
     margin-bottom: 0;
   }
+
   .project-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0;
+    margin-bottom: auto;
   }
-  .project-title {
-    /* display: flex;
-    align-items: center; */
-    background-color: black;
-  }
+
   .project-img {
     margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1648px) {
+  .projects {
+    gap: 4rem;
   }
 }

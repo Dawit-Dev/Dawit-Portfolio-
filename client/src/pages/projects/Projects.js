@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ReactReadMoreReadLess from "react-read-more-read-less";
 import "./projects.css";
+
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
@@ -38,9 +40,18 @@ const Project = () => {
               }
               onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
-            <p className="project-summary" style={{ textAlign: "left" }}>
+            {/* <p className="project-summary" style={{ textAlign: "left" }}>
               {project.description}
-            </p>
+            </p> */}
+            <div className="project-summary">
+              <ReactReadMoreReadLess
+                charLimit={150}
+                readMoreText={"Read more ▼"}
+                readLessText={"Read less ▲"}
+              >
+                {project.description}
+              </ReactReadMoreReadLess>
+            </div>
 
             <div className="btn-group w-100">
               <a
