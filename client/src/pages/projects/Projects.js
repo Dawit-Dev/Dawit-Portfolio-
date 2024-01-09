@@ -28,24 +28,23 @@ const Project = () => {
             className="project-wrapper"
             key={project.id}
             style={{ transition: "all 0.2s ease-in-out" }}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.1)")
+            }
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             <h5 className="project-title">{project.title}</h5>
             <img
               src={project.image}
               className="project-img"
               alt={project.title}
-              style={{ transition: "all 0.2s ease-in-out" }}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.transform = "scale(1.1)")
-              }
-              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
             {/* <p className="project-summary" style={{ textAlign: "left" }}>
               {project.description}
             </p> */}
             <div className="project-summary">
               <ReactReadMoreReadLess
-                charLimit={150}
+                charLimit={140}
                 readMoreText={"Read more ▼"}
                 readLessText={"Read less ▲"}
               >
