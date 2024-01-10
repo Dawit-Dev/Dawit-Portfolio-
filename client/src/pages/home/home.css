@@ -13,7 +13,6 @@
 }
 
 .image-intro {
-  /* margin-top: -50px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,52 +50,6 @@
 .button:hover {
   background-color: #0a383f;
 }
-
-/* .hero {
-  background-color: aliceblue;
-}
-
-.highlight {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.image-intro {
-  position: relative;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  align-items: center;
-}
-
-.intro {
-  font-size: 2rem;
-  line-height: 3rem;
-  border-left: solid 8px #125059;
-  padding-left: 16px;
-}
-
-.img {
-  width: 300px;
-  height: auto;
-  border-radius: 3%;
-  background: linear-gradient(#125059, #591b12);
-}
-
-.btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media only screen and (min-width: 1644px) {
-  .image-intro {
-    flex-direction: row;
-  }
-} */
 
 @media only screen and (min-width: 1140px) {
   .home-main {
