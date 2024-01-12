@@ -1,38 +1,182 @@
 .navbar {
-  background-color: #536980;
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
+  width: 60%;
+  margin: auto;
+  height: 64px;
+  z-index: 5;
   background-color: #125059;
-  color: #C1D0DC;
+  color: #c1d0dc;
+  align-items: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.25rem;
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
-.navbar-brand,
+/* hamburger menu */
+.menu__toggle {
+  opacity: 0;
+}
+
+.menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+.menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+.menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu__toggle:checked ~ .menu__box {
+  right: 0 !important;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #591b12;
+  transition-duration: 0.25s;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 84px;
+  right: -100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition-duration: 0.25s;
+  text-align: center;
+  z-index: 10;
+}
+
+.menu__box ul {
+  width: 100%;
+  margin: auto;
+}
+
+.menu__item,
+.active {
+  transition-duration: 0.25s;
+}
+
+.menu__item:hover {
+  background-color: blue;
+}
+
+.custom-nav-item .active {
+  background-color: #83281b !important;
+  font-weight: 700;
+  cursor: default;
+}
+
+.active:hover {
+  background-color: #125059;
+}
+
+@media screen and (max-width: 767px) {
+  .custom-nav-item {
+    border-bottom: solid 1px gray;
+  }
+
+  .custom-nav-item .active,
+  .menu__item:hover {
+    /* background-color: #125059 !important; */
+    background-color: #83281b;
+  }
+
+  .menu__btn {
+    margin-left: 2rem;
+    padding-bottom: 4px;
+  }
+
+  .menu__box {
+    background-color: #591b12;
+    width: 100%;
+    z-index: 100 !important;
+    position: absolute;
+    top: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__box {
+    flex-direction: row;
+    width: max-content;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: none;
+    height: 64px;
+    transition-duration: 0ms;
+  }
+
+  .menu__btn {
+    display: none;
+  }
+}
+
+/* .navbar-brand,
 .navbar-toggler {
   margin-right: 15px;
-}
+} */
 
-.navbar-nav {
+/* .navbar-nav {
   margin-left: auto;
-}
+  display: flex;
+  align-items: center;
+} */
 
 @media only screen and (min-width: 1140px) {
-   .navbar {
+  .navbar {
     right: calc(5% + 20px);
-   }
+  }
 }
 
 @media only screen and (min-width: 1348px) {
-   .navbar {
+  .navbar {
     right: calc(10% + 20px);
-   }
+  }
 }
 @media only screen and (min-width: 1648px) {
-   .navbar {
+  .navbar {
     right: calc(15% + 20px);
-   }
+  }
 }
