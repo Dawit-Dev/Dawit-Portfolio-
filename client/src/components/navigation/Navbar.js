@@ -29,62 +29,64 @@ function Navbar() {
   }, []);
 
   return (
-    <header className="navbar custom-header navbar-expand-md border-0">
-      <div className="container-fluid">
-        <NavLink className="navbar-brand border-0 text-light" to="/">
-          My Website
-        </NavLink>
-        <input
-          id="menu__toggle"
-          className="menu__toggle"
-          type="checkbox"
-          checked={isChecked}
-          onChange={toggleNav}
-        />
-        <label className="menu__btn" htmlFor="menu__toggle">
-          <span></span>
-        </label>
-        {(toggleMenu || screenWidth > 767) && (
-          <nav className="text-center menu__box">
-            <ul className="navbar-nav border-0 menu__box__ul">
-              <li className="nav-item custom-nav-item">
-                <NavLink
-                  to="/"
-                  className={`nav-link px-4 border-end-0 text-light fs-4 ${({
-                    isActive,
-                  }) => (isActive ? "active" : "menu__item")}`}
-                  onClick={screenTest}
-                >
-                  <span>Home</span>
-                </NavLink>
-              </li>
-              <li className="nav-item custom-nav-item">
-                <NavLink
-                  to="/gallery"
-                  className={`nav-link px-4 border-end-0 text-light fs-4 ${({
-                    isActive,
-                  }) => (isActive ? "active" : "menu__item")}`}
-                  onClick={screenTest}
-                >
-                  <span>Projects</span>
-                </NavLink>
-              </li>
-              <li className="nav-item custom-nav-item">
-                <NavLink
-                  to="/about"
-                  className={`nav-link px-4 border-end-0 text-light fs-4 ${({
-                    isActive,
-                  }) => (isActive ? "active" : "menu__item")}`}
-                  onClick={screenTest}
-                >
-                  <span>About</span>
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
-        )}
-      </div>
-    </header>
+    <>
+      <NavLink to="/">
+        <img src="/images/logo.png" alt="logo" className="logo" />
+      </NavLink>
+      <header className="navbar custom-header navbar-expand-md border-0">
+        <div>
+          <input
+            id="menu__toggle"
+            className="menu__toggle"
+            type="checkbox"
+            checked={isChecked}
+            onChange={toggleNav}
+          />
+          <label className="menu__btn" htmlFor="menu__toggle">
+            <span></span>
+          </label>
+          {(toggleMenu || screenWidth > 767) && (
+            <nav className="text-center menu__box">
+              <ul className="navbar-nav border-0 menu__box__ul">
+                <li className="nav-item custom-nav-item">
+                  <NavLink
+                    to="/"
+                    className={`nav-link px-4 border-end-0 text-light fs-4 ${({
+                      isActive,
+                    }) => (isActive ? "active" : "menu__item")}`}
+                    onClick={screenTest}
+                  >
+                    <span>Home</span>
+                  </NavLink>
+                </li>
+                <li className="nav-item custom-nav-item">
+                  <NavLink
+                    to="/gallery"
+                    className={`nav-link px-4 border-end-0 text-light fs-4 ${({
+                      isActive,
+                    }) => (isActive ? "active" : "menu__item")}`}
+                    onClick={screenTest}
+                  >
+                    <span>Projects</span>
+                  </NavLink>
+                </li>
+                <li className="nav-item custom-nav-item">
+                  <NavLink
+                    to="/about"
+                    className={`nav-link px-4 border-end-0 text-light fs-4 ${({
+                      isActive,
+                    }) => (isActive ? "active" : "menu__item")}`}
+                    onClick={screenTest}
+                  >
+                    <span>About</span>
+                  </NavLink>
+                </li>
+              </ul>
+            </nav>
+          )}
+        </div>
+      </header>
+    </>
   );
 }
 
