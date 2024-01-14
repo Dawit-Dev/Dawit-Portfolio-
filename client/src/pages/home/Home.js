@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./home.css"
+import "./home.css";
 
 const Home = () => {
   const [summary, setSummary] = useState({});
@@ -28,7 +28,7 @@ const Home = () => {
         <h4 className="intro">{summary.intro}</h4>
       </div>
       <div className="btns">
-        <Link className="button text-light" to="/gallery">
+        <Link className="button text-light" to="/projects">
           My Projects
         </Link>
         <Link className="button text-light" to="/about">

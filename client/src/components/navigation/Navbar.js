@@ -61,7 +61,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item custom-nav-item">
                   <NavLink
-                    to="/gallery"
+                    to="/projects"
                     className={`nav-link px-4 border-end-0 text-light fs-4 ${({
                       isActive,
                     }) => (isActive ? "active" : "menu__item")}`}

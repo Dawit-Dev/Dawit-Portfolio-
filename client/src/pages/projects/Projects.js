@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ReactReadMoreReadLess from "react-read-more-read-less";
+import { motion } from "framer-motion";
 import "./projects.css";
 
-
-const Project = () => {
+const Project = ({ setProject }) => {
   const [projects, setProjects] = useState([]);
 
+  const navigate = useNavigate();
+ 
   useEffect(() => {
     axios
       .get("/api/projects")
@@ -16,6 +19,15 @@ const Project = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  const scrollAnimation = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: (index) => ({
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, delay: 0.5 * index },
+    }),
+  };
+
   return (
     <div className="projects-main">
       <div className="title">
@@ -23,15 +35,20 @@ const Project = () => {
         <p className="lead">Check out some of my latest projects below.</p>
       </div>
       <div className="projects">
-        {projects.map((project) => (
-          <div
+        {projects.map((project, index) => (
+          <motion.div
+            variants={scrollAnimation}
+            initial="hidden"
+            whileInView="visible"
+            custom={index + 1}
             className="project-wrapper"
             key={project.id}
-            style={{ transition: "all 0.2s ease-in-out" }}
-            onMouseOver={(e) =>
-              (e.currentTarget.style.transform = "scale(1.1)")
-            }
-            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => {
+              setProject(project)
+              navigate("/project-details");
+            }}
           >
             <h5 className="project-title">{project.title}</h5>
             <img
@@ -39,9 +56,6 @@ const Project = () => {
               className="project-img"
               alt={project.title}
             />
-            {/* <p className="project-summary" style={{ textAlign: "left" }}>
-              {project.description}
-            </p> */}
             <div className="project-summary">
               <ReactReadMoreReadLess
                 charLimit={140}
@@ -70,7 +84,7 @@ const Project = () => {
                 Code
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <style>
