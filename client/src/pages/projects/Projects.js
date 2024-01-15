@@ -40,6 +40,7 @@ const Project = ({ setProject }) => {
             variants={scrollAnimation}
             initial="hidden"
             whileInView="visible"
+            viewport={{ amount: 0.2 }}
             custom={index + 1}
             className="project-wrapper"
             key={project.id}
